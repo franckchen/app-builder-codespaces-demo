@@ -1,0 +1,13 @@
+{
+  "name": "Python 3",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "python:3.10.13-bookworm",
+  "postCreateCommand": "pip install streamlit appbuilder-sdk",
+  "features": {},
+  "portsAttributes": {
+    "8051": {
+      "label": "streamlit server",
+      "onAutoForward": "notify"
+    }
+  }
+}
